@@ -2,12 +2,12 @@
 using namespace std;
 
 int main() {
-    // std:: is redundant by adding using namespace std
-    std::cout << "Hello, World!" << endl;
-    std::cout << "Git is now tracking this project." << endl;
+	// std:: is redundant by adding using namespace std
+	std::cout << "Hello, World!" << endl;
+	std::cout << "Git is now tracking this project." << endl;
 
 
-    string strName;
+	string strName;
 
 	cout << "enter Name\n";
 
@@ -15,5 +15,4 @@ int main() {
 
 	cout << "Hello " << strName << endl;
 
-    return 0;
 }

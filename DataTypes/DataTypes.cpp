@@ -13,7 +13,7 @@ int main()
 
 	bool blnIsAdult;
 
-	unsigned int intZip;
+	unsigned int intZip; //can't be negative (un signed, no sign in front)
 
 	float fltWage;
 	float aryHoursWorkedPerDay[7];
