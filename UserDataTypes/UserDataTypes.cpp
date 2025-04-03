@@ -1,5 +1,5 @@
 #include <iostream>
-#include "declarations.h"
+#include "Declarations.h"
 using namespace std;
 
 int main()

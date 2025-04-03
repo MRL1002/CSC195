@@ -1,4 +1,4 @@
-#include "declarations.h"
+#include "Declarations.h"
 
 void Sandwitch::Toast()
 {
