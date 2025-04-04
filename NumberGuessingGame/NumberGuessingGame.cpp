@@ -1,4 +1,4 @@
-#include "Definitions.cpp"
+#include "Declarations.h"
 using namespace std;
 
 int main()

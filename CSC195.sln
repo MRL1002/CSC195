@@ -7,9 +7,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloWorld", "HelloWorld\He
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DataTypes", "DataTypes\DataTypes.vcxproj", "{DE122ED9-752A-44DC-A268-111811D21125}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UserDataTypes", "UserDataTypes\UserDataTypes.vcxproj", "{F00FEE4C-0CBD-466C-B97B-E9E4B784515D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UserDataTypesNotes", "UserDataTypes\UserDataTypes.vcxproj", "{F00FEE4C-0CBD-466C-B97B-E9E4B784515D}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NumberGuessingGame", "NumberGuessingGame\NumberGuessingGame.vcxproj", "{FBFF157D-C333-4BD6-837C-49F46207EC4F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UserDataTypes2", "UserDataTypes2\UserDataTypes2.vcxproj", "{93CE0B96-6603-4F1B-9771-E3584D7B32CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,14 @@ Global
 		{FBFF157D-C333-4BD6-837C-49F46207EC4F}.Release|x64.Build.0 = Release|x64
 		{FBFF157D-C333-4BD6-837C-49F46207EC4F}.Release|x86.ActiveCfg = Release|Win32
 		{FBFF157D-C333-4BD6-837C-49F46207EC4F}.Release|x86.Build.0 = Release|Win32
+		{93CE0B96-6603-4F1B-9771-E3584D7B32CC}.Debug|x64.ActiveCfg = Debug|x64
+		{93CE0B96-6603-4F1B-9771-E3584D7B32CC}.Debug|x64.Build.0 = Debug|x64
+		{93CE0B96-6603-4F1B-9771-E3584D7B32CC}.Debug|x86.ActiveCfg = Debug|Win32
+		{93CE0B96-6603-4F1B-9771-E3584D7B32CC}.Debug|x86.Build.0 = Debug|Win32
+		{93CE0B96-6603-4F1B-9771-E3584D7B32CC}.Release|x64.ActiveCfg = Release|x64
+		{93CE0B96-6603-4F1B-9771-E3584D7B32CC}.Release|x64.Build.0 = Release|x64
+		{93CE0B96-6603-4F1B-9771-E3584D7B32CC}.Release|x86.ActiveCfg = Release|Win32
+		{93CE0B96-6603-4F1B-9771-E3584D7B32CC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

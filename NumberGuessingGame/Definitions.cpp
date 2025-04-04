@@ -1,5 +1,4 @@
-#include <memory>
-#include <iostream>
+#include "Declarations.h"
 using namespace std;
 
 int diffSelect(string strDiff) {
@@ -36,7 +35,7 @@ void gameLoop(int intGuess, int intAnswer) {
 	}
 }
 
-void runGame(int intDif){
+void runGame(int intDif) {
 
 	int intGuess;
 	int intCorrectNum = rand() % (intDif + 1);
