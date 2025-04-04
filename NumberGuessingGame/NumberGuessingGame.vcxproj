@@ -127,10 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="GameDefinition.cpp" />
     <ClCompile Include="NumberGuessingGame.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Declarations.h" />
+    <ClInclude Include="Game.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
