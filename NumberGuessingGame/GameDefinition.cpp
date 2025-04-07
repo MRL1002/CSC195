@@ -55,7 +55,7 @@ void Game::runGame(int intDif) {
 
 	const int MAX_GUESSES = 10;
 
-	// loops 10 times, 1 for each max guess
+	// loops 10 times, 1 for each guess
 	for (int i = 0; i < MAX_GUESSES; i++) {
 
 		cout << i+1 << ". Guess a number between 1 and " << intDif << ": ";
