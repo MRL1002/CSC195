@@ -2,7 +2,13 @@
 
 // sets game difficulty based on what the user enters
 
-int Game::diffSelect(string strDiff) {
+int Game::diffSelect() {
+
+	string strDiff;
+
+	cout << "Select difficulty: (E)asy, (N)ormal, or (H)ard" << endl;
+
+	cin >> strDiff; // diff is based on the first character
 
 	// game difficulty is based on range of numbers
 
