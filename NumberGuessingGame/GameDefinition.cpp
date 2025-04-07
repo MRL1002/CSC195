@@ -10,8 +10,6 @@ int Game::diffSelect() {
 
 	cin >> strDiff; // diff is based on the first character
 
-	// game difficulty is based on range of numbers
-
 	//Easy
 	if (strDiff == "E" || strDiff == "e") {
 		return 10;
