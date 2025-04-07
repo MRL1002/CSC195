@@ -69,7 +69,7 @@ void Game::runGame(int intDif) {
 		if (cin.fail()) {
 			intGuess = 0; // sets intGuess to 0 when a non-int is input
 			cin.clear(); // clears cin error flag
-			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // ignores next line which would cause an infinite error loop
+			cin.ignore(numeric_limits<streamsize>::max(), '\n'); // ignores next line which would cause an infinite error loop
 		}
 
 		gameLoop(intGuess, intCorrectNum);
