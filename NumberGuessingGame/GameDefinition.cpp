@@ -29,18 +29,20 @@ int Game::diffSelect(string strDiff) {
 // Main game loop. tells user if guess is too high or too low
 
 void Game::gameLoop(int intGuess, int intAnswer) {
-	if (intGuess > intAnswer) {
-		cout << "Guess is too high." << endl;
-	}
-	else if (intGuess < intAnswer) {
-		cout << "Guess is too low." << endl;
-	}
-	else if (intGuess == intAnswer) {
-		cout << "You guessed it!" << endl;
-		exit(0);
+	if (intGuess < 1) {
+		cout << "|ERROR| - input is invalid, enter a number greater than 0" << endl;
 	}
 	else {
-		cout << "Invalid guess." << endl;
+		if (intGuess > intAnswer) {
+			cout << "Guess is too high." << endl;
+		}
+		else if (intGuess < intAnswer) {
+			cout << "Guess is too low." << endl;
+		}
+		else if (intGuess == intAnswer) {
+			cout << "You guessed it!" << endl;
+			exit(0);
+		}
 	}
 }
 
@@ -55,8 +57,18 @@ void Game::runGame(int intDif) {
 
 	// loops 10 times, 1 for each max guess
 	for (int i = 0; i < MAX_GUESSES; i++) {
+
 		cout << i+1 << ". Guess a number between 1 and " << intDif << ": ";
+
 		cin >> intGuess;
+
+		// bug net, if the users enters a string the program won't entierly break
+		if (cin.fail()) {
+			intGuess = 0; // sets intGuess to 0 when a non-int is input
+			cin.clear(); // clears cin error flag
+			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // ignores next line which would cause an infinite error loop
+		}
+
 		gameLoop(intGuess, intCorrectNum);
 	}
 
