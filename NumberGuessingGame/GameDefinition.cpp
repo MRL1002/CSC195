@@ -29,6 +29,7 @@ int Game::diffSelect(string strDiff) {
 // Main game loop. tells user if guess is too high or too low
 
 void Game::gameLoop(int intGuess, int intAnswer) {
+	// guesses must be greater than 0
 	if (intGuess < 1) {
 		cout << "|ERROR| - input is invalid, enter a number greater than 0" << endl;
 	}
@@ -72,6 +73,7 @@ void Game::runGame(int intDif) {
 		}
 
 		gameLoop(intGuess, intCorrectNum);
+
 	}
 
 	// only displayes if the user runs out of guesses
