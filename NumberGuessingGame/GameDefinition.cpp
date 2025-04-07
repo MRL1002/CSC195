@@ -51,6 +51,8 @@ void Game::gameLoop(int intGuess, int intAnswer) {
 void Game::runGame(int intDif) {
 
 	int intGuess;
+
+	srand(time(0));
 	int intCorrectNum = rand() % (intDif + 1);
 
 	const int MAX_GUESSES = 10;
