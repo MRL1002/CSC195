@@ -22,7 +22,7 @@ int Game::diffSelect() {
 	else if (strDiff == "H" || strDiff == "h") {
 		return 100;
 	}
-	//Default is Medium
+	//Default (Medium)
 	else {
 		cout << "Invalid difficulty selected. Defaulting to medium." << endl;
 		return 50;
