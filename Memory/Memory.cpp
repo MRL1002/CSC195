@@ -26,7 +26,7 @@ int main()
     int* p; // pointers can be uninitialized, refs can't
             // null pointer is the default typically
 
-    p = &i1;
+    p = &i1; // for pointers to be used, they must POINT to a memory location
 
     r = 45; // so now, i1 is now 45
 
