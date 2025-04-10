@@ -1,4 +1,3 @@
-
 #include <iostream>
 using namespace std;
 
@@ -44,4 +43,13 @@ int main()
     cout << "address of p: " << &p << endl;  // will retrieve the address of p
     cout << "address STORED IN p: " << p << endl;  // will retrieve the address STORED IN p, or address of i1
 
+
 }
+
+// static memory is allocated durring compile time
+// it has a fixed size and is allocated on stack
+// int numbers[4];
+
+// dynamic memory is allocated durring run time
+// it has a variable size and is allocated on the heap
+// int* numbers = new int[4];
