@@ -1,5 +1,3 @@
-// Container.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
 
 #include <iostream>
 #include <vector>
@@ -63,6 +61,7 @@ void mp() {
 
 int main()
 {
+
 	cout << "-----Array-----" << endl;
 
 	ary();
@@ -78,7 +77,5 @@ int main()
 	cout << "-----Map-----" << endl;
 	
 	mp();
-
-
 
 }
