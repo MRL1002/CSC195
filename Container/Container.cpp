@@ -9,8 +9,11 @@ void ary() {
 	// created the array
 	string aryDays[7] = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
 
-	// loops through array and prints all of the thigns inside
-	for (int i = 0; i <= aryDays->size(); i++) {
+	// calculates size
+	int size = sizeof(aryDays) / sizeof(aryDays[0]);
+
+	// loops through array and prints all of the things inside
+	for (int i = 0; i < size; i++) {
 		cout << aryDays[i] << endl;
 	}
 }

@@ -54,11 +54,23 @@ int main()
 
 	cout << "--------------------------------------" << endl;
 
-	// uses the arrow because calling chemicles just gives us the memory addtress, meaning it need to be de-referenced, like a pointer 
-	// can also be written (*chemicles).lenght()
-	for (int i = 0; i < chemicles->size(); i++) { 
+	// a way to get the size of an array
+	// complete size of array in bytes
+	// size of first element in bytes aswell
+	int size = sizeof(chemicles) / sizeof(chemicles[0]);
+	cout << size << endl;
+
+	// use the thing above for the size
+	for (int i = 0; i < size; i++) { 
 		cout << &chemicles[i] << endl;
 	}
+
+	//OR use a foreach
+
+	for(string chemicle : chemicles) {
+		cout << chemicle << endl;
+	}
+
 
 	cout << "--------------------------------------" << endl;
 
