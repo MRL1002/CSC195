@@ -2,5 +2,5 @@
 #include <iostream>
 
 void Animal::navigate() {
-	std::cout << "step" << std::endl;
+	std::cout << "clomp" << std::endl;
 }
