@@ -2,6 +2,7 @@
 #include "Animal.h" // since Cat is an animal, cat links to animal
 #include "Cat.h"
 #include "Snake.h"
+#include <vector>
 using namespace std;
 
 
@@ -37,11 +38,35 @@ int main()
 		// since this is the last line the DEstrcuctor is called here
 	}
 
-	Snake solid_snake(false, 4);
-	solid_snake.navigate();
-	solid_snake.speak();
+	//Snake solid_snake(false, 4);
+	//solid_snake.navigate();
+	//solid_snake.speak();
 
-	Cat kitty;
-	kitty.navigate();
-	kitty.speak();
+	//Cat kitty;
+	//kitty.navigate();
+	//kitty.speak();
+
+	// containers to store class instances
+	// they can all be implemented because they're child classes to Animal
+
+	vector<Animal*> animals;
+
+	animals.push_back(new Cat);
+	animals.push_back(new Snake);
+
+	//iterate through
+
+	for (Animal* anim : animals) {
+
+		anim->speak();
+
+	}
+
+	for (Animal* anim : animals) {
+
+		delete anim; // deletes eatch thing from heap memory, the pointers still point, but now to nothing
+
+	}
+
+	animals.clear(); // clears pointers
 }
