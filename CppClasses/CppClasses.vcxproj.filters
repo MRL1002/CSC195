@@ -18,15 +18,30 @@
     <ClCompile Include="CppClasses.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TranqWeapon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Equipment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Database.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Operative.h">
+    <ClInclude Include="Item.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SolidSnake.h">
+    <ClInclude Include="Equipment.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Raiden.h">
+    <ClInclude Include="TranqWeapon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Database.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

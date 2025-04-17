@@ -128,11 +128,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CppClasses.cpp" />
+    <ClCompile Include="Database.cpp" />
+    <ClCompile Include="Equipment.cpp" />
+    <ClCompile Include="Item.cpp" />
+    <ClCompile Include="TranqWeapon.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Operative.h" />
-    <ClInclude Include="Raiden.h" />
-    <ClInclude Include="SolidSnake.h" />
+    <ClInclude Include="Database.h" />
+    <ClInclude Include="Equipment.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="TranqWeapon.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
