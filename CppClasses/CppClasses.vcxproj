@@ -129,6 +129,11 @@
   <ItemGroup>
     <ClCompile Include="CppClasses.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Operative.h" />
+    <ClInclude Include="Raiden.h" />
+    <ClInclude Include="SolidSnake.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
