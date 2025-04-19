@@ -1,13 +1,13 @@
 #pragma once
-#include "Item.h"
+#include "Vehicle.h"
 
-class Equipment : public Item {
+class Car : public Vehicle {
 public:
 
 	void Read(std::ostream& ostream, std::istream& istream);
 	void Write(std::ostream& ostream);
 
-	eType getType() override { return eType::STEALTH; }
+	eType getType() override { return eType::CAR; }
 
 
 protected:

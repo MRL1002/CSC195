@@ -1,19 +1,19 @@
 #pragma once
 #include <vector>
-#include "Item.h"
+#include "Vehicle.h"
 using namespace std;
 
 class Database {
 public:
 
-	vector<Item*> objects;
+	vector<Vehicle*> objects;
 
 	~Database();
 
-	void Create(Item::eType type);
+	void Create(Vehicle::eType type);
 	void DisplayAll();
-	void Display(const std::string& name);
-	void Display(Item::eType type);
+	void DisplayName(const std::string& name);
+	void DisplayType(Vehicle::eType type);
 
 protected:
 

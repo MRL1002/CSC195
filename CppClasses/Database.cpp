@@ -1,39 +1,42 @@
 #include "Database.h"
-#include "Item.h"
-#include "Equipment.h"
-#include "TranqWeapon.h"
+#include "Vehicle.h"
+#include "Car.h"
+#include "Bike.h"
 
 Database::~Database()
 {
-	for (Item* obj : objects) {
+	for (Vehicle* obj : objects) {
 	delete obj;
 	}
 }
 
-void Database::Create(Item::eType type)
+void Database::Create(Vehicle::eType type)
 {
 
-	Item* obj = nullptr;
+	Vehicle* obj = nullptr;
 
 	switch (type)
 	{
 
-	case Item::eType::STEALTH:
-		obj = new Equipment;
+	case Vehicle::eType::BICYCLE:
+		obj = new Bike;
 		break;
-	case Item::eType::TRANQ:
-		obj = new TranqWeapon;
+	case Vehicle::eType::CAR:
+		obj = new Car;
 		break;
-	}	
+	default:
+		cout << "invalid input" << endl;
+		return;
+	}
 
 	obj->Read(cout, cin);
 	objects.push_back(obj);
 
 }
-void Database::Display(const string& name)
+void Database::DisplayName(const string& name)
 {
 
-	for (Item* obj : objects) {
+	for (Vehicle* obj : objects) {
 		if (obj->getName() == name) {
 			obj->Write(cout);
 		}
@@ -41,13 +44,19 @@ void Database::Display(const string& name)
 }
 void Database::DisplayAll()
 {
-
-
-
+	for (Vehicle* obj : objects) {
+		obj->Write(cout);
+	}
 }
 
 
 
-void Database::Display(Item::eType type)
+void Database::DisplayType(Vehicle::eType type)
 {
+	for (Vehicle* obj : objects) {
+		if (obj->getType() == type) {
+			obj->Write(cout);
+		}
+	}
+
 }

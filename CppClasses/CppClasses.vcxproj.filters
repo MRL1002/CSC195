@@ -18,13 +18,13 @@
     <ClCompile Include="CppClasses.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Item.cpp">
+    <ClCompile Include="Vehicle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TranqWeapon.cpp">
+    <ClCompile Include="Car.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Equipment.cpp">
+    <ClCompile Include="Bike.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Database.cpp">
@@ -32,13 +32,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Item.h">
+    <ClInclude Include="Vehicle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Equipment.h">
+    <ClInclude Include="Bike.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TranqWeapon.h">
+    <ClInclude Include="Car.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Database.h">

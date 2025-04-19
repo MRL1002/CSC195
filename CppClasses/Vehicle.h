@@ -2,18 +2,13 @@
 #include <iostream>
 using namespace std;
 
-class Item {
+class Vehicle {
 public:
 
 	enum class eType {
-
-		HEALING,
-		STEALTH,
-		COSMETIC,
-
-		TRANQ,
-		LETHAL,
-		CQC
+	
+		CAR,
+		BICYCLE
 
 	};
 
@@ -21,7 +16,7 @@ public:
 	virtual void Write(std::ostream& ostream);
 
 	string getName();
-	float getWeight();
+	string getColor();
 
 	virtual eType getType() = 0;
 
@@ -31,7 +26,7 @@ protected:
 
 	string strName;
 
-	float fltWeight;
+	string strColor;
 
 };
 

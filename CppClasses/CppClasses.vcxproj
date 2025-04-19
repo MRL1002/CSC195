@@ -129,15 +129,15 @@
   <ItemGroup>
     <ClCompile Include="CppClasses.cpp" />
     <ClCompile Include="Database.cpp" />
-    <ClCompile Include="Equipment.cpp" />
-    <ClCompile Include="Item.cpp" />
-    <ClCompile Include="TranqWeapon.cpp" />
+    <ClCompile Include="Bike.cpp" />
+    <ClCompile Include="Vehicle.cpp" />
+    <ClCompile Include="Car.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Database.h" />
-    <ClInclude Include="Equipment.h" />
-    <ClInclude Include="Item.h" />
-    <ClInclude Include="TranqWeapon.h" />
+    <ClInclude Include="Bike.h" />
+    <ClInclude Include="Vehicle.h" />
+    <ClInclude Include="Car.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
