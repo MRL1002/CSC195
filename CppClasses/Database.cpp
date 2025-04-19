@@ -42,15 +42,14 @@ void Database::DisplayName(const string& name)
 		}
 	}
 }
+// display all vehicles in a list
 void Database::DisplayAll()
 {
 	for (Vehicle* obj : objects) {
 		obj->Write(cout);
 	}
 }
-
-
-
+// display vehicles by type
 void Database::DisplayType(Vehicle::eType type)
 {
 	for (Vehicle* obj : objects) {

@@ -8,7 +8,6 @@ using namespace std;
 
 int main()
 {
-
 	Database database;
 
     bool quit = false;
@@ -34,19 +33,21 @@ int main()
                 cout << "invalid input";
                 break;
             }
+
         case 2:
 
             database.DisplayAll();
 
             break;
-        case 3: // Ask for name, then call database.Display(name)
-        {
-        cout << "Enter a name: ";
-        string name;
-        cin >> name;
-        database.DisplayName(name);
 
-        break;
+        case 3:
+        {
+            cout << "Enter a name: ";
+            string name;
+            cin >> name;
+            database.DisplayName(name);
+
+            break;
         }
         case 4:
         {
@@ -58,8 +59,10 @@ int main()
             break;
         }
         case 5:
+
             quit = true;
             break;
+
         }
     }
 
