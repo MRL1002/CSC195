@@ -18,7 +18,7 @@ int main()
         switch (choice)
         {
         case 1: // Create object by type
-
+        {
             cout << "Enter type (0 for CAR, 1 for BIKE): ";
             int t;
             cin >> t;
@@ -32,13 +32,13 @@ int main()
                 cout << "invalid input";
                 break;
             }
-
+        }
         case 2:
-
+        {
             database.DisplayAll();
 
             break;
-
+        }
         case 3:
         {
             cout << "Enter a name: ";
@@ -54,7 +54,7 @@ int main()
             int t;
             cin >> t;
             database.DisplayType(static_cast<Vehicle::eType>(t));
-            
+
             break;
         }
         case 5:
