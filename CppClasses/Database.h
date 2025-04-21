@@ -15,9 +15,5 @@ public:
 	void DisplayName(const std::string& name);
 	void DisplayType(Vehicle::eType type);
 
-protected:
-
-
-
 };
 

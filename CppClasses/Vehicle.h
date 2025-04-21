@@ -15,12 +15,10 @@ public:
 	virtual void Read(std::ostream& ostream, std::istream& istream);
 	virtual void Write(std::ostream& ostream);
 
-	string getName();
-	string getColor();
-
 	virtual eType getType() = 0;
 
-
+	string getName();
+	string getColor();
 
 protected:
 

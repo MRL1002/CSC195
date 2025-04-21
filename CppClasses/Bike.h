@@ -9,8 +9,4 @@ public:
 
 	eType getType() override { return eType::BICYCLE; }
 
-
-protected:
-
-
 };

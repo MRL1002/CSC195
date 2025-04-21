@@ -17,13 +17,14 @@ void Database::Create(Vehicle::eType type)
 
 	switch (type)
 	{
-
 	case Vehicle::eType::BICYCLE:
 		obj = new Bike;
 		break;
+
 	case Vehicle::eType::CAR:
 		obj = new Car;
 		break;
+
 	default:
 		cout << "invalid input" << endl;
 		return;
@@ -35,7 +36,6 @@ void Database::Create(Vehicle::eType type)
 }
 void Database::DisplayName(const string& name)
 {
-
 	for (Vehicle* obj : objects) {
 		if (obj->getName() == name) {
 			obj->Write(cout);
