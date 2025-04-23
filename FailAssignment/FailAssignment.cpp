@@ -27,7 +27,9 @@ int main() {
 
     }
 
-    shapes.clear();
+    for (Shape* i : shapes) {
+        i->~Shape();
+    }
 
     return 0;
 }
