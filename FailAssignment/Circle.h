@@ -10,8 +10,8 @@ public:
 
     shapeType getType() override { return shapeType::CIRCLE; }
     
-    // unused function, when creating a circle, constructor already takes the radius
-    //void SetRadius(float radius) const { radius = radius; }
+
+    void SetRadius(float radius) { m_radius = radius; }
     float GetRadius() { return m_radius; }
 
 private:

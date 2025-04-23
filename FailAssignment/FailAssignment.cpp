@@ -5,13 +5,13 @@
 
 using namespace std;
 
-
-
 int main() {
     vector<Shape*> shapes;
 
-    Circle* c = new Circle(3.0f);
+    Circle* c = new Circle(1.0f);
     Rectangle* r = new Rectangle(4.0f, 5.0f);
+
+    c->SetRadius(3.0f);
 
     shapes.push_back(c);
     shapes.push_back(r);
