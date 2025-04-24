@@ -1,7 +1,5 @@
 #include "Point.h"
 
-// putting in the namespace not to have to everywhere
-
 namespace Izy {
 
 	void Point::Write(std::ostream& ostream)
@@ -41,6 +39,13 @@ namespace Izy {
 	}
 
 
+	std::ostream& operator<<(std::ostream& ostream, Point pt)
+	{
+		ostream << "(" << pt.x << "," << pt.y << ")" << std::endl;
+
+		// allow printing multiple values in one line
+		return ostream;
+	}
 
 }
 

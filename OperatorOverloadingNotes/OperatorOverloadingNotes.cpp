@@ -18,6 +18,10 @@ using namespace std;
 //    //p1.y += p2.y;
 //}
 
+//void operator << (ostream& ostream, Point pt) {
+//    ostream << pt.x << "," << pt.y << endl;
+//}
+
 int main()
 {
     
@@ -40,6 +44,8 @@ int main()
 
     point3 = (point1 + point2) * 2;
 
-    point3.Write(cout);
+    //point3.Write(cout);
+
+    cout << point3 << point2;
 
 }
