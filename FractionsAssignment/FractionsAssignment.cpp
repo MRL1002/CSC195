@@ -1,10 +1,12 @@
 #include <iostream>
+#include "Fraction.h"
+using namespace mathlib;
 using namespace std;
 
 int main()
 {
-    //Fraction fraction1{ 15, 5 };
-    //std::cout << fraction1 << std::endl;
+    Fraction fraction1(1,2);
+    std::cout << fraction1 << std::endl;
 
     //Fraction fraction2{ 15, 6 };
     //fraction2.Simplify();
