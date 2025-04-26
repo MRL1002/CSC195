@@ -5,8 +5,8 @@
 // mathematical operators
 
 
-template<typename T>
-Fraction<T> Fraction<T>::operator+(Fraction<T> fract2) {
+
+Fraction Fraction::operator+(Fraction fract2) {
 
     Fraction answerFraction;
 
@@ -19,8 +19,8 @@ Fraction<T> Fraction<T>::operator+(Fraction<T> fract2) {
 
 }
 
-template<typename T>
-Fraction<T> Fraction<T>::operator-(Fraction<T> fract2)
+
+Fraction Fraction::operator-(Fraction fract2)
 {
     Fraction answerFraction;
 
@@ -32,8 +32,8 @@ Fraction<T> Fraction<T>::operator-(Fraction<T> fract2)
     return answerFraction;
 }
 
-template<typename T>
-Fraction<T> Fraction<T>::operator*(Fraction<T> fract2)
+
+Fraction Fraction::operator*(Fraction fract2)
 {
     Fraction answerFraction;
 
@@ -43,8 +43,8 @@ Fraction<T> Fraction<T>::operator*(Fraction<T> fract2)
     return answerFraction;
 }
 
-template<typename T>
-Fraction<T> Fraction<T>::operator/(Fraction<T> fract2)
+
+Fraction Fraction::operator/(Fraction fract2)
 {
     Fraction answerFraction;
 
@@ -56,8 +56,8 @@ Fraction<T> Fraction<T>::operator/(Fraction<T> fract2)
 
 // comparison operators
 
-template<typename T>
-bool Fraction<T>::operator==(Fraction<T> fract2)
+
+bool Fraction::operator==(Fraction fract2)
 {
     if (denom == fract2.denom && num == fract2.num) {
         return true;
@@ -68,8 +68,8 @@ bool Fraction<T>::operator==(Fraction<T> fract2)
 
 }
 
-template<typename T>
-bool Fraction<T>::operator!=(Fraction<T> fract2)
+
+bool Fraction::operator!=(Fraction fract2)
 {
     if (denom == fract2.denom && num == fract2.num) {
         return false;
@@ -79,8 +79,8 @@ bool Fraction<T>::operator!=(Fraction<T> fract2)
     }
 }
 
-template<typename T>
-bool Fraction<T>::operator>(Fraction<T> fract2)
+
+bool Fraction::operator>(Fraction fract2)
 {
     if (denom > fract2.denom) {
         return false;
@@ -93,8 +93,8 @@ bool Fraction<T>::operator>(Fraction<T> fract2)
     }
 }
 
-template<typename T>
-bool Fraction<T>::operator<(Fraction<T> fract2)
+
+bool Fraction::operator<(Fraction fract2)
 {
     if (denom > fract2.denom) {
         return true;
@@ -107,8 +107,8 @@ bool Fraction<T>::operator<(Fraction<T> fract2)
     }
 }
 
-template<typename T>
-bool Fraction<T>::operator>=(Fraction<T> fract2)
+
+bool Fraction::operator>=(Fraction fract2)
 {
     if (denom > fract2.denom) {
         return false;
@@ -122,8 +122,8 @@ bool Fraction<T>::operator>=(Fraction<T> fract2)
 
 }
 
-template<typename T>
-bool Fraction<T>::operator<=(Fraction<T> fract2)
+
+bool Fraction::operator<=(Fraction fract2)
 {
     if (denom > fract2.denom) {
         return true;
@@ -140,39 +140,31 @@ bool Fraction<T>::operator<=(Fraction<T> fract2)
 
 // utilty methods
 
-template<typename T>
-T Fraction<T>::gcd(T num, T denom)
+
+int Fraction::gcd(int num, int denom)
 {
-    using signedT = typename make_signed<T>::type;
 
-    signedT sNum = static_cast<signedT>(num);
-    signedT sDenom = static_cast<signedT>(denom);
-
-
-    if (sNum < 0 ) { sNum = -sNum; }
-    if (sDenom < 0 ) { sDenom = -sDenom; }
-
-    while (sDenom != 0) {
-        signedT temp = sDenom;
-        sDenom = sNum % sDenom;
-        sNum = temp;
+    while (denom != 0) {
+        int temp = denom;
+        denom = num % denom;
+        num = temp;
     }
 
-    return static_cast<T>(sNum);
+    return num;
 
 }
 
-template<typename T>
-void Fraction<T>::simplify()
+
+void Fraction::simplify()
 {
 
-    T devisor = gcd(num, denom);
+    int devisor = gcd(num, denom);
     num /= devisor;
     denom /= devisor;
 }
 
-template<typename T>
-double Fraction<T>::toDouble()
+
+double Fraction::toDouble()
 {
     double dbl_answer = 0.0;
 
@@ -181,8 +173,3 @@ double Fraction<T>::toDouble()
     return dbl_answer;
 
 }
-
-template class Fraction<int>;
-template class Fraction<unsigned int>;
-template class Fraction<long>;
-template class Fraction<unsigned long>;
