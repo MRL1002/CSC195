@@ -2,42 +2,49 @@
 #include <iostream>
 using namespace std;
 
+template<typename T>	
 class Fraction {
 
 protected:
 
-	int num, denom;
+	T num, denom;
+		
+	T gcd(T num, T denom);
 
 public:
 
 	Fraction() : num{ 1 }, denom{ 1 } {};
 
-	Fraction(int num_val, int denom_val) : num{ num_val }, denom{ denom_val } {
+	Fraction(T num_val, T denom_val) : num{ num_val }, denom{ denom_val } {
 		if (denom_val == 0) {
 			denom = 1;
 		}
 	}
 
 	// streaming
-	friend std::ostream& operator<<(std::ostream& ostream, Fraction fract);
-	friend std::istream& operator>>(std::istream& istream, Fraction& fract);
+	friend std::ostream& operator<<(std::ostream& ostream, Fraction<T> fract) {
+		return ostream << fract.num << " / " << fract.denom;
+	};
+	friend std::istream& operator>>(std::istream& istream, Fraction<T>& fract) {
+		return istream >> fract.num >> fract.denom;
+	};
 
 	// mathmatical
-	Fraction operator + (Fraction fract2);
-	Fraction operator - (Fraction fract2);
-	Fraction operator * (Fraction fract2);
-	Fraction operator / (Fraction fract2);
+	Fraction<T> operator + (Fraction<T> fract2);
+	Fraction<T> operator - (Fraction<T> fract2);
+	Fraction<T> operator * (Fraction<T> fract2);
+	Fraction<T> operator / (Fraction<T> fract2);
 
 	//comparison
-	bool operator == (Fraction fract2);
-	bool operator != (Fraction fract2);
-	bool operator > (Fraction fract2);
-	bool operator < (Fraction fract2);
-	bool operator >= (Fraction fract2);
-	bool operator <= (Fraction fract2);
+	bool operator == (Fraction<T> fract2);
+	bool operator != (Fraction<T> fract2);
+	bool operator > (Fraction<T> fract2);
+	bool operator < (Fraction<T> fract2);
+	bool operator >= (Fraction<T> fract2);
+	bool operator <= (Fraction<T> fract2);
 
 	//utility
-	Fraction simplify();
+	void simplify();
 	double toDouble();
 
 };
