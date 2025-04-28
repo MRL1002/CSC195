@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Fraction.h"
+using namespace mathlib;
 using namespace std;
 
 int main()
@@ -22,5 +23,4 @@ int main()
     std::cin >> fraction3;
     std::cout << fraction3 << std::endl;
     std::cout << fraction3.toDouble() << std::endl;
-
 }

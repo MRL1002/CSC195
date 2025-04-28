@@ -5,171 +5,168 @@
 // mathematical operators
 
 
+namespace mathlib {
+    Fraction Fraction::operator+(Fraction fract2) {
 
-Fraction Fraction::operator+(Fraction fract2) {
+        Fraction answerFraction;
 
-    Fraction answerFraction;
+        answerFraction.num = num * fract2.denom + denom * fract2.num;
+        answerFraction.denom = denom * fract2.denom;
 
-    answerFraction.num = num * fract2.denom + denom * fract2.num;
-    answerFraction.denom = denom * fract2.denom;
+        return answerFraction;
 
-    answerFraction.simplify();
-
-    return answerFraction;
-
-}
-
-
-Fraction Fraction::operator-(Fraction fract2)
-{
-    Fraction answerFraction;
-
-    answerFraction.num = num * fract2.denom - denom * fract2.num;
-    answerFraction.denom = denom * fract2.denom;
-
-    answerFraction.simplify();
-
-    return answerFraction;
-}
-
-
-Fraction Fraction::operator*(Fraction fract2)
-{
-    Fraction answerFraction;
-
-    answerFraction.num = num * fract2.num;
-    answerFraction.denom = denom * fract2.denom;
-
-    return answerFraction;
-}
-
-
-Fraction Fraction::operator/(Fraction fract2)
-{
-    Fraction answerFraction;
-
-    answerFraction.num = num * fract2.denom;
-    answerFraction.denom = denom * fract2.num;
-
-    return answerFraction;
-}
-
-// comparison operators
-
-
-bool Fraction::operator==(Fraction fract2)
-{
-    if (denom == fract2.denom && num == fract2.num) {
-        return true;
-    }
-    else{
-        return false;
     }
 
-}
 
+    Fraction Fraction::operator-(Fraction fract2)
+    {
+        Fraction answerFraction;
 
-bool Fraction::operator!=(Fraction fract2)
-{
-    if (denom == fract2.denom && num == fract2.num) {
-        return false;
-    }
-    else {
-        return true;
-    }
-}
+        answerFraction.num = num * fract2.denom - denom * fract2.num;
+        answerFraction.denom = denom * fract2.denom;
 
-
-bool Fraction::operator>(Fraction fract2)
-{
-    if (denom > fract2.denom) {
-        return false;
-    }
-    else if (denom == fract2.denom && num > fract2.num) {
-        return true;
-    }
-    else {
-        return true;
-    }
-}
-
-
-bool Fraction::operator<(Fraction fract2)
-{
-    if (denom > fract2.denom) {
-        return true;
-    }
-    else if (denom == fract2.denom && num > fract2.num) {
-        return false;
-    }
-    else {
-        return false;
-    }
-}
-
-
-bool Fraction::operator>=(Fraction fract2)
-{
-    if (denom > fract2.denom) {
-        return false;
-    }
-    else if (denom == fract2.denom && num > fract2.num) {
-        return true;
-    }
-    else {
-        return true;
+        return answerFraction;
     }
 
-}
 
+    Fraction Fraction::operator*(Fraction fract2)
+    {
+        Fraction answerFraction;
 
-bool Fraction::operator<=(Fraction fract2)
-{
-    if (denom > fract2.denom) {
-        return true;
-    }
-    else if (denom == fract2.denom && num > fract2.num) {
-        return false;
-    }
-    else {
-        return false;
-    }
-}
+        answerFraction.num = num * fract2.num;
+        answerFraction.denom = denom * fract2.denom;
 
-
-
-// utilty methods
-
-
-int Fraction::gcd(int num, int denom)
-{
-
-    while (denom != 0) {
-        int temp = denom;
-        denom = num % denom;
-        num = temp;
+        return answerFraction;
     }
 
-    return num;
 
-}
+    Fraction Fraction::operator/(Fraction fract2)
+    {
+        Fraction answerFraction;
+
+        answerFraction.num = num * fract2.denom;
+        answerFraction.denom = denom * fract2.num;
+
+        return answerFraction;
+    }
+
+    // comparison operators
 
 
-void Fraction::simplify()
-{
+    bool Fraction::operator==(Fraction fract2)
+    {
+        if (denom == fract2.denom && num == fract2.num) {
+            return true;
+        }
+        else {
+            return false;
+        }
 
-    int devisor = gcd(num, denom);
-    num /= devisor;
-    denom /= devisor;
-}
+    }
 
 
-double Fraction::toDouble()
-{
-    double dbl_answer = 0.0;
+    bool Fraction::operator!=(Fraction fract2)
+    {
+        if (denom == fract2.denom && num == fract2.num) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
 
-    dbl_answer = static_cast<double>(num) / denom;
-    
-    return dbl_answer;
 
+    bool Fraction::operator>(Fraction fract2)
+    {
+        if (denom > fract2.denom) {
+            return false;
+        }
+        else if (denom == fract2.denom && num > fract2.num) {
+            return true;
+        }
+        else {
+            return true;
+        }
+    }
+
+
+    bool Fraction::operator<(Fraction fract2)
+    {
+        if (denom > fract2.denom) {
+            return true;
+        }
+        else if (denom == fract2.denom && num > fract2.num) {
+            return false;
+        }
+        else {
+            return false;
+        }
+    }
+
+
+    bool Fraction::operator>=(Fraction fract2)
+    {
+        if (denom > fract2.denom) {
+            return false;
+        }
+        else if (denom == fract2.denom && num > fract2.num) {
+            return true;
+        }
+        else {
+            return true;
+        }
+
+    }
+
+
+    bool Fraction::operator<=(Fraction fract2)
+    {
+        if (denom > fract2.denom) {
+            return true;
+        }
+        else if (denom == fract2.denom && num > fract2.num) {
+            return false;
+        }
+        else {
+            return false;
+        }
+    }
+
+
+
+    // utilty methods
+
+
+    int Fraction::gcd(int num, int denom)
+    {
+
+        while (denom != 0) {
+            int temp = denom;
+            denom = num % denom;
+            num = temp;
+        }
+
+        return num;
+
+    }
+
+
+    void Fraction::simplify()
+    {
+
+        int devisor = gcd(num, denom);
+        num /= devisor;
+        denom /= devisor;
+    }
+
+
+    double Fraction::toDouble()
+    {
+        double dbl_answer = 0.0;
+
+        dbl_answer = static_cast<double>(num) / denom;
+
+        return dbl_answer;
+
+    }
 }
