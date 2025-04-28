@@ -6,7 +6,8 @@
 
 
 namespace mathlib {
-    Fraction Fraction::operator+(Fraction fract2) {
+    template<class T>
+    Fraction<T> Fraction<T>::operator+(Fraction fract2) {
 
         Fraction answerFraction;
 
@@ -17,8 +18,8 @@ namespace mathlib {
 
     }
 
-
-    Fraction Fraction::operator-(Fraction fract2)
+    template<class T>
+    Fraction<T> Fraction<T>::operator-(Fraction fract2)
     {
         Fraction answerFraction;
 
@@ -28,8 +29,8 @@ namespace mathlib {
         return answerFraction;
     }
 
-
-    Fraction Fraction::operator*(Fraction fract2)
+    template<class T>
+    Fraction<T> Fraction<T>::operator*(Fraction fract2)
     {
         Fraction answerFraction;
 
@@ -39,8 +40,8 @@ namespace mathlib {
         return answerFraction;
     }
 
-
-    Fraction Fraction::operator/(Fraction fract2)
+    template<class T>
+    Fraction<T> Fraction<T>::operator/(Fraction fract2)
     {
         Fraction answerFraction;
 
@@ -52,8 +53,8 @@ namespace mathlib {
 
     // comparison operators
 
-
-    bool Fraction::operator==(Fraction fract2)
+    template<class T>
+    bool Fraction<T>::operator==(const Fraction fract2)
     {
         if (denom == fract2.denom && num == fract2.num) {
             return true;
@@ -64,8 +65,8 @@ namespace mathlib {
 
     }
 
-
-    bool Fraction::operator!=(Fraction fract2)
+    template<class T>
+    bool Fraction<T>::operator!=(Fraction fract2)
     {
         if (denom == fract2.denom && num == fract2.num) {
             return false;
@@ -75,8 +76,8 @@ namespace mathlib {
         }
     }
 
-
-    bool Fraction::operator>(Fraction fract2)
+    template<class T>
+    bool Fraction<T>::operator>(Fraction fract2)
     {
         if (denom > fract2.denom) {
             return false;
@@ -89,8 +90,8 @@ namespace mathlib {
         }
     }
 
-
-    bool Fraction::operator<(Fraction fract2)
+    template<class T>
+    bool Fraction<T>::operator<(Fraction fract2)
     {
         if (denom > fract2.denom) {
             return true;
@@ -103,8 +104,8 @@ namespace mathlib {
         }
     }
 
-
-    bool Fraction::operator>=(Fraction fract2)
+    template<class T>
+    bool Fraction<T>::operator>=(Fraction fract2)
     {
         if (denom > fract2.denom) {
             return false;
@@ -118,8 +119,8 @@ namespace mathlib {
 
     }
 
-
-    bool Fraction::operator<=(Fraction fract2)
+    template<class T>
+    bool Fraction<T>::operator<=(Fraction<T> fract2)
     {
         if (denom > fract2.denom) {
             return true;
@@ -136,8 +137,8 @@ namespace mathlib {
 
     // utilty methods
 
-
-    int Fraction::gcd(int num, int denom)
+    template<class T>
+    int Fraction<T>::gcd(int num, int denom)
     {
 
         while (denom != 0) {
@@ -150,8 +151,8 @@ namespace mathlib {
 
     }
 
-
-    void Fraction::simplify()
+    template<class T>
+    void Fraction<T>::simplify()
     {
 
         int devisor = gcd(num, denom);
@@ -159,8 +160,8 @@ namespace mathlib {
         denom /= devisor;
     }
 
-
-    double Fraction::toDouble()
+    template<class T>
+    double Fraction<T>::toDouble()
     {
         double dbl_answer = 0.0;
 

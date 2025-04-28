@@ -18,8 +18,19 @@ namespace izy {
         return (num1 > num2) ? num1 : num2;
 
     }
-
 }
+
+template<class T>
+class myFunct {
+public:
+    myFunct(T num) : m_num{ num } {} 
+
+    myFunct<T> operator + (const myFunct& f2) const {
+        return myFunct(this->m_num + f2.m_num);
+    }
+protected:
+    T m_num;
+};
 
 
 int main()
@@ -36,5 +47,12 @@ int main()
     strAry[2] = 13;
 
     cout << strAry[2] << endl;
+
+    myFunct<int> funct1{ 1 };
+
+    myFunct<long> funct2{ 2 };
+
+    myFunct<unsigned int> funct3{ 4 };
+
 
 }

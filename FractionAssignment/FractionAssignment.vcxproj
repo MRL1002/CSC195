@@ -127,7 +127,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Fraction.cpp" />
     <ClCompile Include="FractionAssignment.cpp" />
   </ItemGroup>
   <ItemGroup>
