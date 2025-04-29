@@ -24,8 +24,14 @@ namespace mathlib {
         Fraction() : num{ 1 }, denom{ 1 } {}
 
         Fraction(T num_val, T denom_val) : num{ num_val }, denom{ denom_val } {
-            if (denom_val == 0) {
-                denom = 1;
+            try
+            {
+                if (denom_val == 0) {
+                    denom = 1;
+                }
+            }
+            catch(invalid_argument e) {
+                cout << "Invalid input(s)" << endl;
             }
         }
 
