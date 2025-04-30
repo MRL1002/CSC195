@@ -37,10 +37,10 @@ namespace mathlib {
 
         // Streaming operators
 
-        friend std::ostream& operator<<(std::ostream& ostream, Fraction<T> fract) {
+        std::ostream& operator<<(std::ostream& ostream, Fraction<T> fract) {
             return ostream << fract.num << " / " << fract.denom;
         }
-        friend std::istream& operator>>(std::istream& istream, Fraction<T>& fract) {
+        std::istream& operator>>(std::istream& istream, Fraction<T>& fract) {
             return istream >> fract.num >> fract.denom;
         }
 

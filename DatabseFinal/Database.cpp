@@ -37,7 +37,7 @@ void Database::DisplayName(const string& name)
 {
 	for (Vehicle* obj : objects) {
 		if (obj->getName() == name) {
-			obj->Write(cout);
+			cout << *obj;
 		}
 	}
 
@@ -46,7 +46,7 @@ void Database::DisplayName(const string& name)
 void Database::DisplayAll()
 {
 	for (Vehicle* obj : objects) {
-		obj->Write(cout);
+		cout << *obj;
 	}
 
 }
@@ -55,8 +55,17 @@ void Database::DisplayType(Vehicle::eType type)
 {
 	for (Vehicle* obj : objects) {
 		if (obj->getType() == type) {
-			obj->Write(cout);
+			cout << *obj;
 		}
+	}
+
+}
+
+void Database::Load(const string& fName)
+{
+	ifstream input(fName);
+	if (input.is_open()) {
+		
 	}
 
 }

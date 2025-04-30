@@ -15,5 +15,9 @@ public:
 	void DisplayName(const std::string& name);
 	void DisplayType(Vehicle::eType type);
 
+	void Load(const string& fName);
+	void Save(const string& fName);
+
+
 };
 
