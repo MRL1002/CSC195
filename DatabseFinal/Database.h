@@ -11,6 +11,7 @@ public:
 	~Database();
 
 	void Create(Vehicle::eType type);
+	Vehicle* Create(int intType);
 	void DisplayAll();
 	void DisplayName(const std::string& name);
 	void DisplayType(Vehicle::eType type);
