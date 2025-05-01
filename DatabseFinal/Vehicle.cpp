@@ -23,16 +23,15 @@ void Vehicle::Write(std::ostream& ostream)
 void Vehicle::Read(std::ifstream& istream)
 {
 
-	istream >> strName;
-	istream >> strColor;
+	istream >> strName >> strColor;
 
 }
 
 void Vehicle::Write(std::ofstream& ostream)
 {
 
-	ostream << strName << endl;
-	ostream << strColor << endl;
+	ostream << strName << ' ';
+	ostream << strColor << ' ';
 
 }
 

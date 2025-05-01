@@ -13,6 +13,6 @@ public:
 	eType getType() override { return eType::BICYCLE; }
 protected:
 
-	int m_Weight;
+	float m_Weight = 0.0;
 
 };

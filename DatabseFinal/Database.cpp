@@ -37,24 +37,28 @@ Vehicle* Database::Create(int intType)
 {
 
 	Vehicle* obj = nullptr;
+	bool blnValid = false;
 
 	Vehicle::eType type = static_cast<Vehicle::eType>(intType);
-
-	switch (type)
+	while (!blnValid)
 	{
-	case Vehicle::eType::BICYCLE:
-		obj = new Bike;
-		break;
+		switch (type)
+		{
+		case Vehicle::eType::BICYCLE:
+			obj = new Bike;
+			blnValid = true; 
+			break;
 
-	case Vehicle::eType::CAR:
-		obj = new Car;
-		break;
+		case Vehicle::eType::CAR:
+			obj = new Car;
+			blnValid = true;
+			break;
 
-	default:
-		cout << "invalid input" << endl;
-		return;
+		default:
+			cout << "invalid input" << endl;
+			blnValid = false;
+		}
 	}
-
 	return obj;
 }
 void Database::DisplayName(const string& name)
@@ -87,12 +91,12 @@ void Database::DisplayType(Vehicle::eType type)
 
 void Database::Load(const string& fName)
 {
+	int type;
+
 	ifstream input(fName);
 	if (input.is_open()) {
 		Database::objects.clear();
 		while (!input.eof()) {
-
-			int type;
 			input >> type;
 			Vehicle* vehicle = Create(type);
 			vehicle->Read(input);
@@ -100,6 +104,11 @@ void Database::Load(const string& fName)
 
 		}
 	}
+	else {
+		cout << "Failed to find file" << endl;
+	}
+
+	input.close();
 
 }
 
@@ -109,9 +118,15 @@ void Database::Save(const string& fName)
 	if (output.is_open()) {
 
 		for (Vehicle* vehicle : objects) {
-			output << static_cast<int>(vehicle->getType()) << endl;
+			output << static_cast<int>(vehicle->getType()) << ' ';
 			vehicle->Write(output);
+			output << endl;
 		}
 
 	}
+	else {
+		cout << "Failed to find file" << endl;
+	}
+
+	output.close();
 }

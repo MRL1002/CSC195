@@ -14,6 +14,6 @@ public:
 
 protected:
 
-	float m_GasMileage;
+	float m_GasMileage = 0.0;
 
 };

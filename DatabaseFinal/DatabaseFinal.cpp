@@ -12,7 +12,7 @@ int main()
     bool quit = false;
     while (!quit)
     {
-        cout << "1 - Create\n2 - Display All\n3 - Display by Name\n4 - Display by Type\n5 - Quit\n";
+        cout << "1 - Create\n2 - Display All\n3 - Display by Name\n4 - Display by Type\n5 - Load\n6 - Save\n7 - Quit\n";
         int choice;
         cin >> choice;
         switch (choice)
@@ -58,11 +58,28 @@ int main()
             break;
         }
         case 5:
+        {
+            cout << "enter filename: " << endl;
+            string strName;
+            cin >> strName;
+            database.Load(strName);
+            break;
+        }
+        case 6:
+        {
 
+            cout << "enter filename: " << endl;
+            string strName;
+            cin >> strName;
+            database.Save(strName);
+            break;
+        }
+        case 7:
+        {
             quit = true;
             break;
-
         }
-    }
+        }
 
+    }
 }
