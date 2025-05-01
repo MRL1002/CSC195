@@ -3,11 +3,15 @@
 #include "Bike.h"
 #include "Database.h"
 
+#define _CRTDBG_MAP_ALLOC
+#include <stdlib.h>
+#include <crtdbg.h>
+
 using namespace std;
 
 int main()
 {
-    Database database;
+    Database* database = new Database;
 
     bool quit = false;
     while (!quit)
@@ -25,7 +29,7 @@ int main()
             try {
                 Vehicle::eType type = static_cast<Vehicle::eType>(t);
 
-                database.Create(type);
+                database->Create(type);
                 break;
             }
             catch (exception e) {
@@ -35,7 +39,7 @@ int main()
         }
         case 2:
         {
-            database.DisplayAll();
+            database->DisplayAll();
 
             break;
         }
@@ -44,7 +48,7 @@ int main()
             cout << "Enter a name: ";
             string name;
             cin >> name;
-            database.DisplayName(name);
+            database->DisplayName(name);
 
             break;
         }
@@ -53,7 +57,7 @@ int main()
             cout << "Enter type (0 for CAR, 1 for BIKE): ";
             int t;
             cin >> t;
-            database.DisplayType(static_cast<Vehicle::eType>(t));
+            database->DisplayType(static_cast<Vehicle::eType>(t));
 
             break;
         }
@@ -62,7 +66,7 @@ int main()
             cout << "enter filename: " << endl;
             string strName;
             cin >> strName;
-            database.Load(strName);
+            database->Load(strName);
             break;
         }
         case 6:
@@ -71,7 +75,7 @@ int main()
             cout << "enter filename: " << endl;
             string strName;
             cin >> strName;
-            database.Save(strName);
+            database->Save(strName);
             break;
         }
         case 7:
@@ -81,5 +85,11 @@ int main()
         }
         }
 
+
+
     }
+
+    delete database;
+    _CrtDumpMemoryLeaks();
+
 }

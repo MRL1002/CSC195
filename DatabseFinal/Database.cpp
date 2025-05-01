@@ -94,14 +94,12 @@ void Database::Load(const string& fName)
 	int type;
 
 	ifstream input(fName);
-	if (input.is_open()) {
+	if (input.good() && input.is_open()) {
 		Database::objects.clear();
-		while (!input.eof()) {
-			input >> type;
+		while (input >> type) {
 			Vehicle* vehicle = Create(type);
 			vehicle->Read(input);
 			objects.push_back(vehicle);
-
 		}
 	}
 	else {
